@@ -51,3 +51,27 @@ string [] FillArray (string [] arrayFill)
 	return arrayFill;
 }
 
+string [] SortArray (string [] array)
+{
+	int countValue = 0;
+	string arrayValue = string.Empty;
+	for (int i = 0; i < array.Length; i++)
+	{
+		arrayValue = array[i];
+		if (arrayValue.Length <= 3) countValue++;
+	}
+
+	string [] newArray = new string [countValue];
+	int count = 0;
+	for (int i = 0; i < array.Length; i++)
+	{
+		arrayValue = array[i];
+		if (arrayValue.Length <= 3)
+		{
+			newArray[count] = array[i];
+			count++;
+		}
+	}
+	return newArray;
+}
+
