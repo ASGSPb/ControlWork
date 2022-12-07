@@ -75,3 +75,13 @@ string [] SortArray (string [] array)
 	return newArray;
 }
 
+void PrintArray (string [] array)
+{
+	if (array.Length == 0) Console.WriteLine("Таких элементов в заданном массиве НЕТ! Новый массив пуст ");
+		for (int i = 0; i < array.Length; i++)
+		{
+			Console.Write($"  [{array[i]}]");
+		}
+}
+
+
